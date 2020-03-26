@@ -80,6 +80,6 @@ for(i=0; i<path.length-1; i++) {
 
   }
 
-console.log(roomba1.x, ',', roomba1.y); 
-console.log(roomba1.totalCount);
+console.log(roomba1.x, ',', roomba1.y); //output roomba position
+console.log(roomba1.totalCount);//output amount of dirt piles picked up
 });
