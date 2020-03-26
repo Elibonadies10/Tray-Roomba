@@ -42,7 +42,7 @@ fs.readFile('./input.txt', 'utf8', function (err,roombaFile) {
     }
      //Last line in file is Roomba path
     if (i == fileAsArray.length - 1){ 
-        path = fileAsArray[i]
+        path = fileAsArray[i];
     }
   } 
 
@@ -59,6 +59,9 @@ for(var i=0; i<dirtArray.length; i++){
   dirtLocation = dirtArray[i].split(' ');
   dirtX = Number(dirtLocation[0]);
   dirtY = Number(dirtLocation[1]);
+  if(dirtX > roomWidth || dirtX < 0 || dirtY > roomHeight || dirtY < 0){//tell user if dirt is outside room
+  console.log('Dirt is outside room, please enter valid coordinates')
+}
   room1.addDirt(dirtX, dirtY);
 }
 
